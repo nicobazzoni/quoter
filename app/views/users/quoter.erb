@@ -1,0 +1,162 @@
+
+<div class="w3-row">
+
+
+<div class="w3-col l8 s12">
+  
+  <div class="w3-card-4 w3-margin w3-white">
+
+  <div class="w3-container w3-blue">
+
+  <h3>  <%= @current_user.name %> </h3>
+ 
+  <h1> Quote generator </h1>
+  </div>
+    
+    <div class="w3-container">
+    
+       
+       <h3> <%= @quote.source %> </h3>
+       <p class="w3-xlarge w3-serif">
+       <i><%= @quote.quote %></i></p>
+       
+       
+       <h4><%= @quote.philosophy %></h4>
+      
+       
+        
+      
+       
+       
+       
+      
+    </div>
+
+      <div class="w4-container">
+     
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+
+        
+      
+
+      
+          
+
+        
+        
+        
+        
+
+         
+          
+        
+
+  <br>
+  
+  <style>
+  .btn {
+  background-color: transparent;
+  color: white;
+  padding: 2px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+.dropdown {
+  position: absolute;
+ 
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 00px;
+  z-index: 2;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.btn:hover, .dropdown:hover .btn {
+  background-color: transparent;
+}
+</style>
+</head>
+<body>
+
+<button class="btn">|||</button>
+<div class="dropdown">
+  <button class="btn" style="border-left:50px solid #0d8bf2">
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+  
+
+
+  
+  
+  
+    <a href= "/quote_list/<%= @quote.id %>" method="post">'Add To My List </a>
+    
+    <a href='/quoter' method="GET"> Next Quote </a>
+    
+    <a href= '/quote_list' method="GET"> 
+
+  <a href='/quote_list' method="GET">
+          <button class= "w3-button w3-padding-large w3-black w1-border">
+            My Quotes list
+          </button>
+        </a>
+  
+  
+
+   </div>
+  </div>
+ </div>
+</div>
+
+<div class="w3-card-4 w3-margin w3-white">
+  
+
+<form action="/comments" method="POST">                                   
+         <label for="fname"> Comment</label>
+         <input type="text" name="content"> <br><br>
+         <input type="hidden"  name="quote_id" value="<%= @quote.id %>">
+         
+         <input type="submit" value="Submit">
+       </form> 
+
+       
+       <% if @comments.length  > 0 %> 
+       <ul> 
+        <% @comments.each do |comment| %>
+        <li><%= comment.content %> <%= " - " + comment.user.username %> 
+            
+             <form action="/comments/<%= comment.id %>" method="POST">                                   
+          <input type="hidden" name="_method" value="DELETE" />
+          <input type="hidden" name="quote_id" value="<%= @quote.id %>">
+          <button type="submit" >DELETE POST</button>
+          
+          
+        </form> 
+          </li>
+         <% end %>
+        </ul>
+         <% end %>
+
+        
+         
+       

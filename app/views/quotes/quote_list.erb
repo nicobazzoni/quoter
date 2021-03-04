@@ -1,0 +1,140 @@
+   
+
+
+
+<div class="w3-container w3-blue">
+
+
+
+<h1> <%= @user.name + " 's " %> Quotes list </h1>
+
+</div>
+
+  <% @quote_list.each do |quote| %>
+  
+
+    
+
+  
+    
+  <p class="w3-xlarge w3-serif"> 
+
+  
+ <li> <i> <%= quote.quote %> </i>  <strong> <%= quote.source %> </strong> ,  <%= quote.philosophy %> </li> </p>
+ <div class="w3-container w3-white">
+  <style> 
+.btn {
+  background-color: transparent;
+  color: white;
+  padding: 2px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+}
+
+.dropdown {
+  position: absolute;
+  
+  
+  display: ;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+ 
+  background-color: #f1f1f1;
+  min-width: 00px;
+  z-index: 2;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.btn:hover, .dropdown:hover .btn {
+  background-color: transparent;
+}
+</style>
+</head>
+<body>
+
+<button class="btn">|||</button>
+<div class="dropdown">
+  <button class="btn" style="border-left:50px solid #0d8bf2">
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+    
+   <a href='/quote_list/delete/<%= quote.id %>' method="GET"> DELETE </a>
+    
+    <a href='/quoter' method="GET">Quote Generator </a> 
+     
+   
+   
+  </div>
+</div>
+
+</body>
+</html>
+
+</div>
+  </div>
+  
+  
+
+
+    
+ 
+
+  <% end %>
+
+  </ul>
+  
+  <br>
+ 
+  
+        
+  <a href= '/quoter' method="GET">
+  
+  <button class= "w3-button w3-padding-large w3-red w1-border">
+    
+  Back to Quote Generator
+    
+  </button>
+  </a> 
+       
+  
+  <div class="w3-card-4 w3-margin w3-white">
+  
+             
+              
+      
+      
+    
+   
+       
+
+        
+
+         
+        
+        
+        
+        
+
+      
+       
+         
+
+  
+
