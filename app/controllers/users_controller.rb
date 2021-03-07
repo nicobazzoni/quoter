@@ -50,7 +50,7 @@ class UsersController < ApplicationController
     @user = User.find_by(username: params[:username])
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      redirect to "/quoter"
+      redirect to "/welcome"
     else
       redirect to "/failure"
     end
@@ -100,4 +100,20 @@ get '/users/home' do
   @user = User.find(session[:user_id])
   erb :'/users/home'
 end
-end
+
+    
+
+
+    
+  
+
+    
+    
+    
+    
+
+    
+
+   
+    
+  end

@@ -1,15 +1,18 @@
 
-<div class="w3-row">
 
 
-<div class="w3-col l8 s12">
+
+<div class="w3-col m2 s12">
+  <div class="w3-card-1 w7-margin w3-black">
+
+
+  <br> <h3>  <%= @current_user.username %> </h3>
+  </div>
+  </div>
   
-  <div class="w3-card-4 w3-margin w3-white">
-
-  <div class="w3-container w3-blue">
-
-  <h3>  <%= @current_user.name %> </h3>
+  
  
+  <div class="w3-container w3-blue">
   <h1> Quote generator </h1>
   </div>
     
@@ -102,18 +105,22 @@
   <button class="btn" style="border-left:50px solid #0d8bf2">
     <i class="fa fa-caret-down"></i>
   </button>
-  <div class="dropdown-content">
+  
+  <button class="btn">|||</button>
+  <div class="dropdown-content"> 
   
 
 
   
   
   
-    <a href= "/quote_list/<%= @quote.id %>" method="post">'Add To My List </a>
+    <a href= "/quote_list/<%= @quote.id %>" method="post">Add To My List </a>
     
     <a href='/quoter' method="GET"> Next Quote </a>
     
-    <a href= '/quote_list' method="GET"> 
+   
+
+    <a href= '/welcome' method="GET"> Home </a>
 
   <a href='/quote_list' method="GET">
           <button class= "w3-button w3-padding-large w3-black w1-border">
@@ -127,8 +134,8 @@
   </div>
  </div>
 </div>
-
-<div class="w3-card-4 w3-margin w3-white">
+<br>
+<div class="w3-card-4 w3-margin -blue">
   
 
 <form action="/comments" method="POST">                                   

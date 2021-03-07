@@ -3,8 +3,9 @@ require './config/environment'
 use Rack::MethodOverride
 
 use QuoteController
-use CommentController
 use UsersController
+use CommentController
+
 run ApplicationController
 
 

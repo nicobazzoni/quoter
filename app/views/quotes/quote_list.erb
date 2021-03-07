@@ -4,9 +4,10 @@
 
 <div class="w3-container w3-blue">
 
+<div class="w3-col m2 s12">
+  <div class="w3-card-1 w7-margin w3-black">
 
-
-<h1> <%= @user.name + " 's " %> Quotes list </h1>
+<h1> <%= @user.username + " 's " %> </h1> </div> </div> <br> <h1> Quotes list </h1>
 
 </div>
 
@@ -21,6 +22,7 @@
 
   
  <li> <i> <%= quote.quote %> </i>  <strong> <%= quote.source %> </strong> ,  <%= quote.philosophy %> </li> </p>
+ 
  <div class="w3-container w3-white">
   <style> 
 .btn {
@@ -78,6 +80,9 @@
    <a href='/quote_list/delete/<%= quote.id %>' method="GET"> DELETE </a>
     
     <a href='/quoter' method="GET">Quote Generator </a> 
+
+    <a href= '/welcome' method="GET"> Home </a>
+     
      
    
    
@@ -104,17 +109,7 @@
  
   
         
-  <a href= '/quoter' method="GET">
-  
-  <button class= "w3-button w3-padding-large w3-red w1-border">
-    
-  Back to Quote Generator
-    
-  </button>
-  </a> 
-       
-  
-  <div class="w3-card-4 w3-margin w3-white">
+
   
              
               

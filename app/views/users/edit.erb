@@ -1,0 +1,11 @@
+<h1>Edit your username below</h1>
+
+
+<form action="/users/<%=@user.username%>" method="post">
+<input type="hidden" name="_method" value="patch">
+<label for="updated_username">Update your username here:</label>
+<input type="text" name="updated_username" id="updated_username" value="<%=@user.username%>" required>
+<input type="submit" value="Update Username">
+</form>
+
+<a href= '/welcome' method="GET"> Home </a>
