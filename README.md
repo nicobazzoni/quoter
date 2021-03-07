@@ -7,7 +7,7 @@ Quoter is a philosophy quote generator that users can interact with, allowing th
  * view other users comments
 
 ## Installation 
-clone [Named Link](git@github.com:nicobazzoni/quoter.git/ "quoter")
-Run bundle install
-Run shotgun 
+* clone https://github.com/nicobazzoni/quoter
+* Run bundle install
+* Run shotgun 
 
