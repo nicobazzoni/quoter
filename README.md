@@ -5,7 +5,8 @@ update username
 add or delete quote to a list
 leave comments on quotes
 view other users comments
-##Installation 
+
+## Installation 
 Run bundle install
 Run shotgun 
 
